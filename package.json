@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3"
+  },
+  "source": "html/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  }
+}
