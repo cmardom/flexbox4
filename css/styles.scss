@@ -68,8 +68,9 @@ header{
         img{
           padding-top: 5%;
           flex-grow: 0;
-          flex-basis: 10%;
-          flex-shrink: 1; /*LAS IMAGENES NO SE HACEN MAS PEQUEÑAS*/
+          flex-basis: 1%;
+          flex-shrink: 1; /*LAS IMAGENES NO SE HACEN MAS PEQUEÑAS capa externa, img width:100%
+          ICONOS FONT AWESOME*/
         }
       }
     }
