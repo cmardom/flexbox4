@@ -52,12 +52,14 @@ header{
   .barra{
     background-image: $gradient_barra;
     .contenedor-iconos{
+      display: flex;
+      justify-content: space-evenly;
       .icono{
         color: white;
         display: flex;
         align-items: center;
         padding: 1em 1em;
-        flex-basis: 30%;
+        flex-basis: 20%;
 
         .texto{
           text-align: center;
@@ -68,7 +70,6 @@ header{
         img{
           padding-top: 5%;
           flex-grow: 0;
-          flex-basis: 1%;
           flex-shrink: 1; /*LAS IMAGENES NO SE HACEN MAS PEQUEÑAS capa externa, img width:100%
           ICONOS FONT AWESOME*/
         }
@@ -97,13 +98,8 @@ header{
       tr{
         flex-grow: 1;
         text-align: center;
-
-        th{
-
-        }
         td{
           font-size: 0.8em;
-
         }
       }
 
@@ -146,22 +142,32 @@ main{
       border: 0.1em solid grey;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
 
+      .imagen-curso{
+        flex: 0 1 100%;
+      }
 
       h4{
         font-size: 20px;
       }
       .info-curso{
         width: 265px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
 
 
         .precios{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
           .precio{
             text-decoration: line-through;
           }
           .oferta{
-            text-align: right;
             font-weight: bold;
           }
         }
@@ -170,7 +176,8 @@ main{
           background-color: $color_fondo_boton_curso;
           color: white;
           border: none;
-          padding: 2% 30%;
+          padding: 2% 25%;
+          margin: 0 auto;
 
         }
 
@@ -200,9 +207,6 @@ footer{
 
 /*large*/
 @media screen and (min-width: 768px){
-  /*capa contenedora 100% de la web
-  seccion cursos ancho max 1200px> imagen cabecera y menu no*/
-
   .barra{
     .contenedor-iconos{
       display: flex;
@@ -214,17 +218,23 @@ footer{
     }
 
   }
+
+  main{
+    .cursos{
+      max-width: 1500px;
+    }
+  }
 }
-
-
-@media screen and (min-width: 480px){
-/*3 curso por fila*/
-}
-
-
-
-
-@media screen and (min-width: 280px){
-  /*2 cursos por fila*/
-}
+//
+//
+//@media screen and (min-width: 480px){
+///*3 curso por fila*/
+//}
+//
+//
+//
+//
+//@media screen and (min-width: 280px){
+//  /*2 cursos por fila*/
+//}
 
