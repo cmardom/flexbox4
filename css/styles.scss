@@ -11,7 +11,13 @@ body{
   margin: 0;
 }
 
+.container-max-width {
+  @include containerMaxWith;
+}
+
 header{
+  //display: flex;
+  //justify-content: center;
   nav{
     display: flex;
     justify-content: space-between;
@@ -25,6 +31,8 @@ header{
       flex-basis: 5%;
 
     }
+
+    @include containerMaxWith;
   }
 
   .intro{
@@ -37,8 +45,7 @@ header{
     height: 250px;
     padding:0 10px;
 
-    .wrapper-into-contenido{
-      width: 100%;
+
       .intro-contenido{
         form{
           display: flex;
@@ -57,9 +64,8 @@ header{
       }
 
       @media screen and (min-width: $break_point_large){
-        @include containerWith;
+        @include containerMaxWith;
       }
-    }
 
 
 
@@ -99,7 +105,7 @@ header{
       }
       @media screen and (min-width: $break_point_large){
         flex-direction: row;
-        @include containerWith;
+        @include containerMaxWith;
       }
     }
 
@@ -232,7 +238,7 @@ main{
     }
 
     @media screen and (min-width: $break_point_large){
-      @include containerWith;
+      @include containerMaxWith;
     }
   }
 }
