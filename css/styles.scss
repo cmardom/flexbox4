@@ -33,7 +33,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 250px; /*PREGUNTAR*/
+    height: 250px;
     padding:0 10px;
 
     form{
@@ -53,6 +53,7 @@ header{
     background-image: $gradient_barra;
     .contenedor-iconos{
       display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
       .icono{
         color: white;
@@ -70,9 +71,11 @@ header{
         img{
           padding-top: 5%;
           flex-grow: 0;
-          flex-shrink: 1; /*LAS IMAGENES NO SE HACEN MAS PEQUEÑAS capa externa, img width:100%
-          ICONOS FONT AWESOME*/
+          flex-shrink: 1;
         }
+      }
+      @media screen and (min-width: $break_point_large){
+        flex-direction: row;
       }
     }
   }
@@ -92,7 +95,7 @@ header{
 
     table{
       display: flex;
-      width: 300px; /*PREGUNTAR SI SE PUEDE ANCHO FIJO EN HOVER CARRO*/
+      width: 300px;
       padding: 5px 15px;
 
       tr{
@@ -113,7 +116,7 @@ header{
 
 
     img{
-      width: 100%; /*PREGUNTAR COMO MODIFICAR EL TAMAÑO DE ESTA IMAGEN*/
+      width: 100%;
     }
   }
   .detalles-carro{
@@ -133,30 +136,45 @@ main{
   .cursos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex: 1 0 100%;
+    justify-content: space-between;
 
     .curso{
-      margin: 16px 16px;
-      padding: 5px 5px;
+      $margen_entre_cursos: 16px;
+      margin-bottom: 16px;
       border: 0.1em solid grey;
       display: flex;
       flex-direction: column;
 
-      .imagen-curso{
-        flex: 0 1 100%;
+      @media screen and (min-width: $break_point_small){
+        flex-basis: calc(50% - ($margen_entre_cursos * .5));
       }
 
-      h4{
-        font-size: 20px;
+      @media screen and (min-width: $break_point_medium){
+        flex-basis: calc(33.3% - ($margen_entre_cursos * .66));
       }
+
+      @media screen and (min-width: $break_point_large){
+        flex-basis: calc(25% - ($margen_entre_cursos * .75));
+      }
+
+      .imagen-curso{
+        max-width: 100%;
+      }
+
       .info-curso{
-        width: 265px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 8px;
 
+        h4{
+          font-size: 20px;
+        }
 
+        & > p{
+          border: 1px solid red;
+          //margin-top: auto;
+        }
 
         .precios{
           display: flex;
@@ -176,12 +194,16 @@ main{
           background-color: $color_fondo_boton_curso;
           color: white;
           border: none;
-          padding: 2% 25%;
-          margin: 0 auto;
+          padding: 8px;
+          align-self: stretch;
 
         }
 
       }
+    }
+
+    @media screen and (min-width: $break_point_large){
+      @include containerWith;
     }
   }
 }
@@ -204,37 +226,3 @@ footer{
     }
   }
 }
-
-/*large*/
-@media screen and (min-width: 768px){
-  .barra{
-    .contenedor-iconos{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      .icono{
-        /*cambiar tamaño icono en movil*/
-      }
-    }
-
-  }
-
-  main{
-    .cursos{
-      max-width: 1500px;
-    }
-  }
-}
-//
-//
-//@media screen and (min-width: 480px){
-///*3 curso por fila*/
-//}
-//
-//
-//
-//
-//@media screen and (min-width: 280px){
-//  /*2 cursos por fila*/
-//}
-

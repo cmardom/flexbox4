@@ -3,3 +3,8 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin containerWith(){
+  max-width: 1500px;
+}
+
