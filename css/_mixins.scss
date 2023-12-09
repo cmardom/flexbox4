@@ -6,6 +6,28 @@
 
 @mixin containerMaxWith(){
   max-width: 1200px;
-  width: 100%;
+  flex-grow: 1;
+  margin: 0 auto; // dice el profesor que hay que ponerlo
+}
+
+// Mixin para la media query de pantalla grande
+@mixin large-screen {
+  @media screen and (min-width: $break_point_large) {
+    @content;
+  }
+}
+
+// Mixin para la media query de pantalla mediana
+@mixin medium-screen {
+  @media screen and (min-width: $break_point_medium) {
+    @content;
+  }
+}
+
+// Mixin para la media query de pantalla pequeña
+@mixin small-screen {
+  @media screen and (min-width: $break_point_small) {
+    @content;
+  }
 }
 
