@@ -13,7 +13,7 @@ body{
 
 .container-max-width{
   max-width: 1200px;
-  margin: 0 auto; // dice el profesor que hay que ponerlo
+  margin: 0 auto;
 }
 
 header{
@@ -24,10 +24,6 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px;
-
-    .logo{
-      // flex-basis: 2%;
-    }
 
     .carro{
       display: flex;
@@ -47,8 +43,7 @@ header{
         table{
           display: flex;
           width: 300px;
-          //padding: 5px 15px;
-
+        
           tr{
             flex-grow: 1;
             text-align: center;
@@ -62,11 +57,9 @@ header{
           background-color: #5F29F1;
           color: white;
           padding: 2% 25%;
-          //margin: 2% 10%;
           width: 100%;
           display: block;
         }
-
 
         img{
           width: 100%;
@@ -90,11 +83,6 @@ header{
         input{
           flex-basis: 100%;
         }
-        .submit{
-          img{
-            //flex-basis: 30%;
-          }
-        }
       }
       @include large-screen{
         max-width: 280px;
@@ -114,7 +102,6 @@ header{
         display: flex;
         align-items: center;
         padding: 1em 1em;
-        //flex-basis: 20%;
         flex-grow: 1;
 
         .texto{
@@ -176,10 +163,6 @@ main{
         flex-basis: calc(25% - $margen_entre_cursos);
       }
 
-      .imagen-curso{
-        //flex-basis: 50%; //?
-      }
-
       .info-curso{
         display: flex;
         flex-direction: column;
@@ -189,11 +172,6 @@ main{
         h4{
           font-size: 20px;
         }
-
-        //& > p{
-        //  border: 1px solid red;
-        //  //margin-top: auto;
-        //}
 
         .precios{
           display: flex;
@@ -226,7 +204,6 @@ main{
 footer{
   background-color: black;
   color: white;
-  // display: flex;
 
 
   .contenedor-footer{
