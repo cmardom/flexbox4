@@ -28,8 +28,53 @@ header{
     .logo{
       // flex-basis: 2%;
     }
-    .carro > img{
-      // flex-basis: 5%;
+
+    .carro{
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:hover .detalles-carro{
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fbfdfc;
+        z-index: 1;
+        margin-right: 15px;
+        padding: 10px;
+
+        table{
+          display: flex;
+          width: 300px;
+          //padding: 5px 15px;
+
+          tr{
+            flex-grow: 1;
+            text-align: center;
+            td{
+              font-size: 0.8em;
+            }
+          }
+
+        }
+        .boton-carrito{
+          background-color: #5F29F1;
+          color: white;
+          padding: 2% 25%;
+          //margin: 2% 10%;
+          width: 100%;
+          display: block;
+        }
+
+
+        img{
+          width: 100%;
+        }
+      }
+      .detalles-carro{
+        display: none;
+      }
     }
   }
 
@@ -97,53 +142,6 @@ header{
       display: flex;
       justify-content: center;
     }
-  }
-}
-
-
-.carro{
-  position: relative;
-
-  &:hover .detalles-carro{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    background-color: #fbfdfc;
-    z-index: 1;
-    margin-right: 15px;
-    padding: 10px;
-
-    table{
-      display: flex;
-      width: 300px;
-      //padding: 5px 15px;
-
-      tr{
-        flex-grow: 1;
-        text-align: center;
-        td{
-          font-size: 0.8em;
-        }
-      }
-
-    }
-    .boton-carrito{
-      background-color: #5F29F1;
-      color: white;
-      padding: 2% 25%;
-      //margin: 2% 10%;
-      width: 100%;
-      display: block;
-    }
-
-
-    img{
-      width: 100%;
-    }
-  }
-  .detalles-carro{
-    display: none;
   }
 }
 

@@ -32,6 +32,53 @@ header nav {
           justify-content: space-between;
   padding: 10px;
 }
+header nav .carro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+header nav .carro:hover .detalles-carro {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fbfdfc;
+  z-index: 1;
+  margin-right: 15px;
+  padding: 10px;
+}
+header nav .carro:hover .detalles-carro table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+}
+header nav .carro:hover .detalles-carro table tr {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+header nav .carro:hover .detalles-carro table tr td {
+  font-size: 0.8em;
+}
+header nav .carro:hover .detalles-carro .boton-carrito {
+  background-color: #5F29F1;
+  color: white;
+  padding: 2% 25%;
+  width: 100%;
+  display: block;
+}
+header nav .carro:hover .detalles-carro img {
+  width: 100%;
+}
+header nav .carro .detalles-carro {
+  display: none;
+}
 header .intro {
   background-image: url("/img/hero.jpg");
   background-size: cover;
@@ -122,48 +169,6 @@ header .barra .contenedor-iconos .icono img {
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-.carro {
-  position: relative;
-}
-.carro:hover .detalles-carro {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 100%;
-  background-color: #fbfdfc;
-  z-index: 1;
-  margin-right: 15px;
-  padding: 10px;
-}
-.carro:hover .detalles-carro table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 300px;
-}
-.carro:hover .detalles-carro table tr {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: center;
-}
-.carro:hover .detalles-carro table tr td {
-  font-size: 0.8em;
-}
-.carro:hover .detalles-carro .boton-carrito {
-  background-color: #5F29F1;
-  color: white;
-  padding: 2% 25%;
-  width: 100%;
-  display: block;
-}
-.carro:hover .detalles-carro img {
-  width: 100%;
-}
-.carro .detalles-carro {
-  display: none;
 }
 
 main h2 {
