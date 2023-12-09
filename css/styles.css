@@ -1,0 +1,277 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container-max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+header .intro {
+  background-image: url("/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 10% 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header .intro .intro-contenido form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .intro .intro-contenido form input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  header .intro .intro-contenido {
+    max-width: 280px;
+  }
+}
+header .barra {
+  background-image: -webkit-gradient(linear, left top, right top, from(#741d51), to(#e44e52));
+  background-image: linear-gradient(to right, #741d51 0%, #e44e52 100%);
+}
+header .barra .contenedor-iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .barra .contenedor-iconos .icono {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 1em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+header .barra .contenedor-iconos .icono .texto {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 0.7em;
+}
+@media screen and (min-width: 768px) {
+  header .barra .contenedor-iconos .icono .texto {
+    margin: 0 32px;
+  }
+}
+header .barra .contenedor-iconos .icono img {
+  padding-top: 5%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+@media screen and (min-width: 768px) {
+  header .barra .contenedor-iconos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .barra {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.carro {
+  position: relative;
+}
+.carro:hover .detalles-carro {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: #fbfdfc;
+  z-index: 1;
+  margin-right: 15px;
+  padding: 10px;
+}
+.carro:hover .detalles-carro table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+}
+.carro:hover .detalles-carro table tr {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+.carro:hover .detalles-carro table tr td {
+  font-size: 0.8em;
+}
+.carro:hover .detalles-carro .boton-carrito {
+  background-color: #5F29F1;
+  color: white;
+  padding: 2% 25%;
+  width: 100%;
+  display: block;
+}
+.carro:hover .detalles-carro img {
+  width: 100%;
+}
+.carro .detalles-carro {
+  display: none;
+}
+
+main h2 {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+main .cursos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+main .cursos .curso {
+  margin-bottom: 16px;
+  border: 0.1em solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 280px) {
+  main .cursos .curso {
+    -ms-flex-preferred-size: calc(50% - 16px);
+        flex-basis: calc(50% - 16px);
+  }
+}
+@media screen and (min-width: 480px) {
+  main .cursos .curso {
+    -ms-flex-preferred-size: calc(33.3% - 16px);
+        flex-basis: calc(33.3% - 16px);
+  }
+}
+@media screen and (min-width: 768px) {
+  main .cursos .curso {
+    -ms-flex-preferred-size: calc(25% - 16px);
+        flex-basis: calc(25% - 16px);
+  }
+}
+main .cursos .curso .info-curso {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 8px;
+}
+main .cursos .curso .info-curso h4 {
+  font-size: 20px;
+}
+main .cursos .curso .info-curso .precios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+main .cursos .curso .info-curso .precios .precio {
+  text-decoration: line-through;
+}
+main .cursos .curso .info-curso .precios .oferta {
+  font-weight: bold;
+}
+main .cursos .curso .info-curso .agregar-carrito {
+  background-color: #33C3F0;
+  color: white;
+  border: none;
+  padding: 8px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer .contenedor-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .contenedor-footer ul {
+  list-style-type: none;
+}
+footer .contenedor-footer ul li {
+  line-height: 25px;
+}
+@media screen and (min-width: 768px) {
+  footer .contenedor-footer ul {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
