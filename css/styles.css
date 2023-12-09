@@ -262,16 +262,29 @@ footer .contenedor-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 16px;
 }
-footer .contenedor-footer ul {
-  list-style-type: none;
-}
-footer .contenedor-footer ul li {
-  line-height: 25px;
+footer .contenedor-footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  footer .contenedor-footer ul {
-    padding-left: 0;
-    padding-right: 0;
+  footer .contenedor-footer nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
+}
+footer .contenedor-footer nav ul {
+  list-style-type: none;
+}
+footer .contenedor-footer nav ul:first-child {
+  padding: 0;
+}
+footer .contenedor-footer nav ul li {
+  line-height: 25px;
 }/*# sourceMappingURL=styles.css.map */

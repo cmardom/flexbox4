@@ -26,10 +26,10 @@ header{
     padding: 10px;
 
     .logo{
-      //flex-basis: 2%;
+      // flex-basis: 2%;
     }
     .carro > img{
-      //flex-basis: 5%;
+      // flex-basis: 5%;
     }
   }
 
@@ -222,29 +222,38 @@ main{
 
       }
     }
-
-    //@include large-screen{
-    //}
   }
 }
 
 footer{
   background-color: black;
   color: white;
+  // display: flex;
+
 
   .contenedor-footer{
     display: flex;
+    padding: 0 16px;
 
-    ul{
-      list-style-type: none;
-      li{
-        line-height: 25px;
+    nav{
+      
+      @include large-screen{
+        flex: 0 1 50%;
       }
 
-      @include large-screen{
-        //margin: 0;
-        padding-left: 0;
-        padding-right: 0;
+      display: flex;
+      justify-content: space-between;
+
+      ul{
+        list-style-type: none;
+  
+        &:first-child{
+          padding: 0;
+        }
+        
+        li{
+          line-height: 25px;
+        }
       }
     }
   }
